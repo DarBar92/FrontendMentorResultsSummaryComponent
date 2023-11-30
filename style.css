@@ -1,0 +1,214 @@
+/* Custom properties */
+
+:root {
+    /* colors */
+        /* primary */
+        --prim-Light-red: hsl(0, 100%, 67%);
+        --prim-Orangey-yellow: hsl(39, 100%, 56%);
+        --prim-Green-teal: hsl(166, 100%, 37%);
+        --prim-Cobalt-blue: hsl(234, 85%, 45%);
+        /* neutral */
+        --neut-White: hsl(0, 0%, 100%);
+        --neut-Pale-blue: hsl(221, 100%, 96%);
+        --neut-Light-lavender: hsl(241, 100%, 89%);
+        --neut-Dark-gray-blue: hsl(224, 30%, 27%);
+        /* gradients */
+            /* background */
+        --grad-Light-slate-blue: hsl(252, 100%, 67%);
+        --grad-Light-royal-blue: hsl(241, 81%, 54%);
+            /* circle */
+        --grad-Violet-blue: hsla(256, 72%, 46%, 1);
+        --grad-Persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+/* Quick reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 100dvh;
+    align-items: center;
+}
+
+.your-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 375px;
+    background-image: linear-gradient(var(--grad-Light-slate-blue), var(--grad-Light-royal-blue));
+    border-radius: 0 0 30px 30px;
+    padding: 1em 3em;
+}
+
+.your-result h1 {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 1.10rem;
+    font-weight: 500;
+    padding-bottom: 1em;
+}
+
+.result-circle {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(var(--grad-Violet-blue), var(--grad-Persian-blue));
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.result {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.of {
+    color:  hsla(0, 0%, 100%, 0.4);
+}
+
+.your-result h2 {
+    color: var(--neut-White);
+    font-weight: 500;
+    padding-bottom: 0.5em;
+}
+
+.content {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.summary {
+    padding: 1.5em 2em;
+    max-width: 375px;
+}
+
+.summary h2 {
+    font-size: 1.18rem;
+    padding-bottom: 1.5em;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding: 1.25em;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.summary-item:nth-child(2) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: var(--prim-Light-red);
+}
+
+.summary-item:nth-child(3) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: var(--prim-Orangey-yellow);
+}
+
+.summary-item:nth-child(4) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--prim-Green-teal);
+}
+
+.summary-item:nth-child(5) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: var(--prim-Cobalt-blue);
+}
+
+.items {
+    display: flex;
+}
+
+.item-title {
+    margin-left: 0.5em;
+}
+
+.score {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+.your-score {
+    padding-right: 0.5em;
+}
+
+.out-of {
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+.continue {
+    color: var(--neut-White);
+    background-color: var(--neut-Dark-gray-blue);
+    border: 0;
+    border-radius: 100px;
+    width: 100%;
+    padding: 1em 0;
+    margin-top: 1em;
+    font-size: 1.14rem;
+    font-weight: 500;
+}
+
+.continue:hover {
+    cursor: pointer;
+    background-image: linear-gradient(var(--grad-Light-slate-blue), var(--grad-Light-royal-blue));
+}
+
+.continue:focus {
+    cursor: pointer;
+    background-image: linear-gradient(var(--grad-Light-slate-blue), var(--grad-Light-royal-blue));
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+        justify-content: center;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 0.90fr 1fr;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 6px 1px 15px 4px rgba(0,0,0,0.10);
+    }
+
+    .your-result {
+        border-radius: 30px;
+    }
+
+    .your-result h1 {
+        margin-top: 1em;
+    }
+
+    .result-circle {
+        width: 10em;
+        height: 10em;
+        margin-top: 1em;
+    }
+
+    .content {
+        padding: .7em;
+    }
+}
